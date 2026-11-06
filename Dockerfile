@@ -1,6 +1,8 @@
 ARG PHP_VERSION=8.4
 FROM php:${PHP_VERSION}-fpm-alpine
 
+LABEL org.opencontainers.image.source=https://github.com/zdienos/php-nginx-supervisor
+
 RUN apk upgrade --no-cache \
     && apk add --no-cache \
     nginx \
